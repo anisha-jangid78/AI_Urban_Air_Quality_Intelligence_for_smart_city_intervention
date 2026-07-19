@@ -149,21 +149,4 @@ pip install -r requirements.txt
 
 streamlit run app.py
 ```
-
----
-
-## 👥 Team
-
-**Project:** AI-Powered Urban Air Quality Intelligence for Smart City Intervention
-
-Developed as a Smart City AI Solution for environmental monitoring and intelligent decision support.
-
----
-
-## 📄 License
-
-This project is intended for educational, research, and hackathon purposes.
-
----
-
 # 🌱 Building Cleaner, Healthier, and Smarter Cities with Artificial Intelligence.
