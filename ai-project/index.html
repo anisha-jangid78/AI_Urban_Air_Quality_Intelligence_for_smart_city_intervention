@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VayuDrishti — AI-Powered Urban Air Quality Intelligence</title>
+  <meta name="description" content="Real-time AI-powered air quality monitoring, prediction, and enforcement intelligence platform for Indian cities. Geospatial pollution attribution, hyperlocal forecasting, and citizen health advisories." />
+  <meta name="keywords" content="AQI, Air Quality, India, Smart City, AI, Pollution, Geospatial, Health" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌬️</text></svg>" />
+</head>
+<body>
+  <div id="app">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon"><i data-lucide="wind"></i></div>
+        <div class="brand-text">
+          <h1>VayuDrishti</h1>
+          <span class="brand-tagline">AI Air Quality Intelligence</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav" id="sidebar-nav">
+        <button class="nav-item active" data-view="dashboard" id="nav-dashboard">
+          <span class="nav-icon"><i data-lucide="layout-dashboard"></i></span>
+          <span class="nav-label">Dashboard</span>
+        </button>
+        <button class="nav-item" data-view="map" id="nav-map">
+          <span class="nav-icon"><i data-lucide="map"></i></span>
+          <span class="nav-label">AQI Map</span>
+        </button>
+        <button class="nav-item" data-view="forecast" id="nav-forecast">
+          <span class="nav-icon"><i data-lucide="brain-circuit"></i></span>
+          <span class="nav-label">AI Forecast</span>
+        </button>
+        <button class="nav-item" data-view="sources" id="nav-sources">
+          <span class="nav-icon"><i data-lucide="scan-search"></i></span>
+          <span class="nav-label">Source Attribution</span>
+        </button>
+        <button class="nav-item" data-view="health" id="nav-health">
+          <span class="nav-icon"><i data-lucide="heart-pulse"></i></span>
+          <span class="nav-label">Health Advisory</span>
+        </button>
+        <button class="nav-item" data-view="enforcement" id="nav-enforcement">
+          <span class="nav-icon"><i data-lucide="shield-check"></i></span>
+          <span class="nav-label">Enforcement Intel</span>
+        </button>
+        <button class="nav-item" data-view="compare" id="nav-compare">
+          <span class="nav-icon"><i data-lucide="bar-chart-3"></i></span>
+          <span class="nav-label">City Compare</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="city-selector">
+          <label for="city-select">Active City</label>
+          <select id="city-select">
+            <option value="delhi">Delhi NCR</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="bengaluru">Bengaluru</option>
+            <option value="kolkata">Kolkata</option>
+            <option value="chennai">Chennai</option>
+          </select>
+        </div>
+        <div class="last-updated" id="last-updated">
+          Last updated: --
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+      <!-- Top Bar -->
+      <header class="top-bar">
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+        <div class="top-bar-info">
+          <h2 id="view-title">Dashboard</h2>
+          <span class="top-bar-city" id="top-bar-city">Delhi NCR</span>
+        </div>
+        <div class="top-bar-aqi" id="top-bar-aqi">
+          <span class="aqi-badge" id="top-aqi-badge">--</span>
+          <span class="aqi-label" id="top-aqi-label">Loading...</span>
+        </div>
+      </header>
+
+      <!-- View Container -->
+      <div class="view-container" id="view-container">
+        <div class="loading-screen" id="loading-screen">
+          <div class="loader"></div>
+          <p>Initializing AI Intelligence Engine...</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
