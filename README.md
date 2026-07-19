@@ -136,17 +136,5 @@ AI-Powered-Urban-Air-Quality-Intelligence/
 │── README.md
 ```
 
----
-
-## ▶️ Installation
-
-```bash
-git clone https://github.com/your-username/AI-Powered-Urban-Air-Quality-Intelligence.git
-
-cd AI-Powered-Urban-Air-Quality-Intelligence
-
-pip install -r requirements.txt
-
-streamlit run app.py
 ```
 # 🌱 Building Cleaner, Healthier, and Smarter Cities with Artificial Intelligence.
